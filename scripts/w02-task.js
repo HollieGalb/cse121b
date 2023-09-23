@@ -4,7 +4,7 @@
 
 /* Step 2 - Variables */
 let fullName = "Hollie Galbraith";
-let currentYear = Date.getYear();
+let currentYear = new Date().getFullYear();
 let profilePicture = "images/selfie.jpg";
 
 /* Step 3 - Element Variables */
@@ -12,25 +12,24 @@ const nameElement = document.getElementById('name');
 const foodElement = document.getElementById('food');
 const yearElement = document.querySelector('#year');
 
-const imageElement = document.getElementsByTagName('img');
+const imageElement = document.querySelector('img[src="images/placeholder.png"]');
 
 /* Step 4 - Adding Content */
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
-
 yearElement.textContent = currentYear;
 
 imageElement.setAttribute('src', profilePicture);
 imageElement.setAttribute('alt', `Profile image of ${fullName}`);
 
-
 /* Step 5 - Array */
-let favFoods = ['Almonds', 'Waffles','Peanut Butter', 'Syrup'];
+let favFoods = ['Almonds', ' Waffles',' Peanut Butter', ' Syrup'];
 //foodElement.textContent(favFoods);
 //document.body.appendChild(foodElement);
+let foodItems = " ";
 foodElement.innerHTML += `<br>${favFoods}`;
 
 //step 3
-let lastFavFood = 'Oats';
+let lastFavFood = ' Oats';
 favFoods.push(lastFavFood);
 
 //step 5
