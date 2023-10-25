@@ -42,19 +42,11 @@ function sortPokemon(list) {
 function doStuffList(data) {
     const listId = document.querySelector("#outputList");
     let pokeList = data.results;
-    // let listOutput = "";
-    // let i = 0;
-    // do{
-    //     listOutput += `<li>${pokeList.name}</li>`;
-    //     i++;
 
-    // }while (i < pokeList.length);
     pokeList.forEach((item) =>{
         const listOutput = `<li>${item.name}</li>`;
         listId.innerHTML += listOutput;
     })
-
-    // listId.innerHTML = listOutput;
     
     console.log(data);
 } 
